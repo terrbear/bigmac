@@ -15,6 +15,14 @@ export default ({ state, dispatch }: Props) => {
     e.preventDefault();
     e.stopPropagation();
 
+    if (!year || year < 2001) {
+      console.error("enter something after 2000");
+      return;
+    } else if (!salary || salary <= 0) {
+      console.error("gimme a >0 salary");
+      return;
+    }
+
     dispatch({
       type: DB.ActionType.AddSalary,
       salary: { year: year ?? 0, salary: salary ?? 0, currency },
