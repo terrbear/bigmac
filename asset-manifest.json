@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "https://terrbear.org/bigmac/static/css/main.33b9ebfe.css",
+    "main.js": "https://terrbear.org/bigmac/static/js/main.138d56fd.js",
+    "index.html": "https://terrbear.org/bigmac/index.html",
+    "main.33b9ebfe.css.map": "https://terrbear.org/bigmac/static/css/main.33b9ebfe.css.map",
+    "main.138d56fd.js.map": "https://terrbear.org/bigmac/static/js/main.138d56fd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33b9ebfe.css",
+    "static/js/main.138d56fd.js"
+  ]
+}
