@@ -51,7 +51,8 @@ export default ({ state, dispatch }: Props) => {
                     <td className="text-right">
                       {new Intl.NumberFormat(undefined, {
                         currency: salary.currency,
-                      }).format(salary.salary)}
+                      }).format(salary.salary)}{" "}
+                      {salary.currency}
                     </td>
                     <td>
                       <button type="button" onClick={() => removeSalary(i)}>

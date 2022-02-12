@@ -15,23 +15,23 @@ const bmi = (s: DB.Salary): number => {
 };
 
 export default ({ state }: Props) => {
-  const data: Array<[number, number]> = [];
+  const data: Array<[string, number]> = [];
 
   let salary: DB.Salary | undefined;
   for (const s of state.salaries) {
     if (salary) {
       for (let y = s.year + 1; y < s.year; y++) {
-        data.push([y, bmi({ ...s, year: y })]);
+        data.push([y.toString(), bmi({ ...s, year: y })]);
       }
     }
     salary = s;
 
-    data.push([s.year, bmi(s)]);
+    data.push([s.year.toString(), bmi(s)]);
   }
 
   if (salary && salary.year < 2022) {
     for (let y = salary.year + 1; y <= 2022; y++) {
-      data.push([y, bmi({ ...salary, year: y })]);
+      data.push([y.toString(), bmi({ ...salary, year: y })]);
     }
   }
 
@@ -45,7 +45,6 @@ export default ({ state }: Props) => {
       data={[["Year", "Big Macs"], ...data]}
       width="800px"
       height="600px"
-      options={{ hAxis: { format: "" } }}
     />
   );
 };

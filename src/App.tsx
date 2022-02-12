@@ -21,7 +21,7 @@ function App() {
             <History state={state} dispatch={dispatch} />
           </div>
         </div>
-        <p className="mt-10 text-gray-700">
+        <p className="mt-10 text-gray-700 text-xs">
           This plots the number of big macs you could purchase in a year. More
           big macs means more spending power, at least at McD's. All data is
           kept locally. If you refresh, you'll lose your history. Sorry.
